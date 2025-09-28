@@ -1,0 +1,38 @@
+syntax = "proto3";
+
+package registry;
+
+option go_package = "nerosoft.com/aone/registry";
+
+service RegistryService {
+  rpc Register(RegisterRequest) returns (RegisterReply);
+  rpc Deregister(DeregisterRequest) returns (DeregisterReply);
+  rpc GetNodes(GetNodesRequest) returns (GetNodesReply);
+}
+
+message RegisterRequest {
+  string service = 1;
+  string address = 2;
+  int32 ttl_seconds = 3;
+}
+
+message RegisterReply {
+  bool success = 1;
+}
+
+message DeregisterRequest {
+  string service = 1;
+  string address = 2;
+}
+
+message DeregisterReply {
+  bool success = 1;
+}
+
+message GetNodesRequest {
+  string service = 1;
+}
+
+message GetNodesReply {
+  repeated string nodes = 1;
+}
