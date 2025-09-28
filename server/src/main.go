@@ -4,8 +4,8 @@ import (
 	"log"
 	"net/http"
 
-	registryconnect "nerosoft.com/aone/registry/gen/registryconnect"
-	internal "nerosoft.com/aone/registry/internal"
+	registryconnect "nerosoft.com/aone/registry-server/gen/registryconnect"
+	internal "nerosoft.com/aone/registry-server/internal"
 )
 
 func main() {

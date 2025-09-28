@@ -5,7 +5,7 @@ import (
 	"fmt"
 
 	"github.com/bufbuild/connect-go"
-	registry "nerosoft.com/aone/registry/gen"
+	registry "nerosoft.com/aone/registry-server/gen"
 )
 
 type RegistryService struct {

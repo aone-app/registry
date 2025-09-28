@@ -11,7 +11,7 @@ import (
 	strings "strings"
 
 	connect_go "github.com/bufbuild/connect-go"
-	registry "nerosoft.com/aone/registry/gen"
+	registry "nerosoft.com/aone/registry-server/gen"
 )
 
 // This is a compile-time assertion to ensure that this generated file and the connect package are

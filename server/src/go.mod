@@ -1,4 +1,4 @@
-module nerosoft.com/aone/registry
+module nerosoft.com/aone/registry-server
 
 go 1.25.1
 
