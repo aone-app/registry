@@ -1,0 +1,9 @@
+version: "1.0"
+services:
+  registry:
+    build: .
+    container_name: rc_registry
+    environment:
+      - REDIS_HOST=localhost:6379
+    ports:
+      - "8080:8080"
