@@ -1,0 +1,28 @@
+version: v2
+clean: true
+inputs:
+  - directory: "../protos"
+managed:
+  enabled: true
+plugins:
+  - remote: buf.build/protocolbuffers/go
+    out: go/gen
+    opt:
+      - paths=source_relative
+  - remote: buf.build/bufbuild/connect-go
+    out: go/gen
+    opt:
+      - paths=source_relative
+      # 仅生成客户端
+      - generate_client=true
+  # # --- Java SDK ---
+  # - remote: buf.build/protocolbuffers/java
+  #   out: gen/java
+  #   opt:
+  #     - lite  # 生成轻量级Java类（可选）
+  # --- C# SDK ---
+  # - remote: buf.build/protocolbuffers/csharp
+  #   out: csharp/gen
+  #   opt:
+  #     - base_namespace=RegistryClient
+  #     - nullable
